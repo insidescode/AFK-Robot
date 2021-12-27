@@ -25,17 +25,11 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, CommandHandler, 
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 from MISCL.chat_status import *
-AFKSAY = """—🚸••÷[Hყρҽ Aϝƙ Bσƚ]÷••🚸—
-ᴡᴀɪᴛ ɪ ʜᴇᴀʀᴅ ᴛʜᴀᴛ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ ꜱᴏᴍᴇᴛʜɪɴɢ ᴛʜᴀᴛ ᴡᴏᴜʟᴅ ꜱᴀʏ ᴛʜᴀᴛ ʏᴏᴜ ᴀʀᴇ ᴀꜰᴋ.
-𝘞𝘦𝘭𝘭 𝘸𝘦𝘭𝘭 𝘞𝘦𝘭𝘭, 𝘥𝘰𝘯'𝘵 𝘺𝘰𝘶 𝘸𝘰𝘳𝘳𝘺.
+AFKSAY = """Hey there.
 
-ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴛʏᴘᴇ /afk ᴀɴᴅ ʀᴇꜱᴛ ɪꜱ ᴍʏ ᴡᴏʀᴋ.
-
-
-🖥 Dҽʋ Mҽɳƚισɳ: @Krakinz | @KrakinzBot
-—🚸••÷[ Hყρҽ Aϝƙ Bσƚ ]÷••🚸—
+I am a simple AFK Bot. I tell users that you are away if you are, so they don't need to be hanging for your reply.
 """
-HYPE_AFK_BOT_IMG = "https://telegra.ph/file/8e5be7f7bd1f93ef370b1.jpg"
+HYPE_AFK_BOT_IMG = "https://telegra.ph/file/72a6935b3af8962bd64f9.jpg"
 IMPORTED = {}
 HELPABLE = {}
 GDPR = []
@@ -58,17 +52,17 @@ def start(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="••÷  Add AFKBot to group  ÷••",
+                    text="Add AFK Robot To Your Group",
                     url="t.me/{}?startgroup=true".format(context.bot.username),)], ]),)
     else:
         update.effective_message.reply_photo(
             HYPE_AFK_BOT_IMG,
-            "—🚸••÷[Hყρҽ Aϝƙ Bσƚ]÷••🚸—\n\n♦️𝐈𝐌𝐏𝐎𝐑𝐓𝐀𝐍𝐓♦️\n𝘐 𝘩𝘢𝘷𝘦 𝘵𝘰 𝘣𝘦 𝘢𝘥𝘮𝘪𝘯 𝘪𝘯𝘰𝘳𝘥𝘦𝘳 𝘵𝘰 𝘸𝘰𝘳𝘬 𝘱𝘳𝘰𝘱𝘦𝘳𝘭𝘺.\n\n—🚸••÷[Hყρҽ Aϝƙ Bσƚ]÷••🚸—",
+            "Bot Should be Admin for some Features To Work Properly",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="••÷   🆅🅸🆂🅸🆃 ☆🍫 ÷••",
-                    url="https://t.me/KrakinzBot")], ]),)
+                    text="Channel",
+                    url="https://t.me/sluttyoreo")], ]),)
 
 
 def main():
@@ -77,11 +71,11 @@ def main():
 
 
 LOGGER.info("READY")
-cprint(f"               —••÷[ Hყρҽ Aϝƙ Bσƚ ]÷••—    online", 'yellow')
+cprint(f"AFK Robot is Online", 'yellow')
 updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 main()
 updater.idle()
-cprint(f"—••÷[ Hყρҽ Aϝƙ Bσƚ ]÷••—    offline", 'white', 'on_red')
-cprint(f"—🖥 Dҽʋ Mҽɳƚισɳ: ", 'red')
-cprint(f"@Krakinz | @KrakinzBot", 'green')
+cprint(f"AFK Robot   offline", 'white', 'on_red')
+cprint(f"Join Channel", 'red')
+cprint(f"@Sluttyoreo | @Aarzaai_Ishq", 'green')
 updater.stop()
